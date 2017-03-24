@@ -1,2 +1,7 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<h1>Blog da Vida</h1>
+
+<% @posts.each do |post| %>
+  <%= post.titulo %>
+  <%= post.autor %>
+  <%= link_to 'Ler mais...', posts_show_path(post) %>
+<% end %>
