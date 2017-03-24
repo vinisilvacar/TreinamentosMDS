@@ -1,0 +1,11 @@
+<h1>Postagens</h1>
+<%= link_to 'Criar Postagem'  , new_path %>
+<br>
+<br>
+<br>
+<% @posts.each do |post| %>
+<%= post.titulo %>
+<%= link_to 'Mostrar',meu_ovo_path(post) %>
+<br>
+<br>
+<%end%>

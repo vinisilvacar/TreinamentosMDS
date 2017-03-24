@@ -1,0 +1,18 @@
+<center>
+<h1>Formulario de Cadastro</h1>
+
+<h1>Criar Postagem</h1>
+<br>
+
+<%= form_for @post, url: {action: "create"} do |r| %>
+<p><%= r.label :titulo %>
+<br>
+<%= r.text_field :titulo %></p>
+<br>
+<p><%= r.label :texto %>
+<br>
+<%= r.text_area :texto %></p>
+ <br>
+<%= r.submit "Postar" %>
+
+<%end%>
