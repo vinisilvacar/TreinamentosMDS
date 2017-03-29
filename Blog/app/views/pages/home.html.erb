@@ -1,0 +1,7 @@
+<h1>Pages#home</h1>
+
+<%= link_to 'Criar Post', posts_new_path %> <br>
+
+<% @posts.each do |post| %>
+  <%= link_to post.title, posts_show_path(post) %> <br>
+<% end %>

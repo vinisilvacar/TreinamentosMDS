@@ -1,2 +1,11 @@
 <h1>Posts#show</h1>
 <p>Find me in app/views/posts/show.html.erb</p>
+
+<p>Titulo: <%= @post.title %> </p>
+<p>Descricao: <%= @post.content %> </p>
+
+<%= form_for (@post, url: {action: 'destroy', params: {id: @post.id}}) do |destroy| %>
+  <%= destroy.submit 'Deletar Post', data: {confirm: "Tem certeza?"} %>
+<% end %>
+
+<%= link_to 'Editar', posts_edit_path(post) %> <br>
