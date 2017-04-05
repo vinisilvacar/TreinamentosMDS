@@ -37,7 +37,7 @@ class PostsController < ApplicationController
 
   #Encapsulamento
   private
-    def post_params
+  def post_params
     #Funcao para definir quais os parametros eu vou querer passar
       params.require(:post).permit(:title, :content)
     end
